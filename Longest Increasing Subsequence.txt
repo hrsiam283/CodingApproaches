@@ -1,0 +1,11 @@
+Ex: 1 3 2 5 7
+Step->1:
+1 porjonto koyta longest subsequence possible =>dp[1]=1
+3 porjonto => dp[3]= 2
+2 porjonto => dp[2]=2
+5 porjonto => dp[5]=3
+
+ei man gulo jana thaklei kintu 7 pornjonto ber kora somvob..
+7 theke asha jay 5,2,3,1 
+dp[7]= max(dp[5]+1,dp[2]+1,dp[3]+1,dp[1]+1);
+isn't it simple?????
