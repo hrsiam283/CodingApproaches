@@ -1,0 +1,55 @@
+brief of coin change 1:
+coin change e mul somossa hoi dp agabo kivabe. eta onekta graph er moto kore chinta kora jay othoba glass full korar problem er moto.
+Ex; 
+[1,2,5], amount= 5
+sorbonimno koto gulo coin use kore 5 banano jabe? dekhei bole dea jay 1. kintu kivabe agabo sekhane jhamela hoi..
+
+Obs 1: 
+5 theke kothay kothay jete parbe? => 4, 3, 0
+4 er jonno, 3 er jonno, 0 er jnno minimum possible size koto?
+ei sobgulor moddhekar minimum size + 1 e to 5 amount er minimum size.
+
+Obs 2; 
+er pore je duschinta mathay ashe seta holo, kono value theke amount possible nao hote pare sekhetre?
+
+Ex; amount 5, [2,4]
+
+5 theke jaoa jabe => 3, 1
+3 theke jaoa jabe=> 1
+1 theke kothao jaoa jabe na.
+
+tahole 3, 1 er jonno minimum size koto pabo? uttor hocche amra prothome ekta value = INT_MAX dhore nibo. erpor jodi oita theke kono size toiri
+kora jay tahole ei val er sathe minimum kore nibo.
+
+jodi 0 na hoye negative hoye jay => tahole amra nicher line execute e korbo na
+val = min(val, func(something));
+orthat val INT_MAX e theke jabe
+
+
+
+Coin Exchange II:
+ekhane combinatorics er jhamela ache. orthat 1 1 2, 1 2 1 ei duitake ekoi hiseb korte hobe..
+
+
+technique: prothome ekta kore value te jotodur jaoa somvob jabo
+amount = 5, [1,2,5]
+
+5 theke jete parbo => 4, 3, 2, 1 (shudhu prothom value niye) ete ki hobe, 1... 11..  111... orthat 1 prothom dikei sesh hoye jabe. 
+evabe erpor dui sesh hobe, erpor 5
+orthat amra sobgulo path sorted pabo.. 1 majhkhane ba 2 sobar seshe erokom asbei na
+
+ekhetre kintu dp er state 2 ta hobe? kivabe? prothome amar 1 niye kaj korlam, erpor 2, erpor 5
+orthat prothome 0th index niye, erpor 0+1th, tarpor 0+2th. Sutorang indx ekti state.
+
+abar ektu prothom theke shuru kori.. 5 theke shudhu 0th index niye kothay kothay jete pari? 4, 3, 2, 1, 0
+orthat sudhumatro prothom index use kore gontobbe puchate pari 1 ta upayee.
+
+erpor amra index 2 use kore aro koyekta gontobbe e jete parbo.. wait?
+4 theke jete parbo 2,0 te (2 use kore)
+orthat ekta valid gontobbo. eta ki shudhu 2 use kore paichi? na, 1 o use kora lagche purbe.
+orthath x index porjonto kotogulo valid gontobbo pacchi setai dp te rakhte hobe.
+
+dp[x][y] = x index porjonto y amount er jonno kotogulo valid path.. 
+
+https://leetcode.com/problems/coin-change-ii/
+https://leetcode.com/problems/coin-change/
