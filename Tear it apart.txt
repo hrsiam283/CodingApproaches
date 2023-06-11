@@ -1,0 +1,12 @@
+https://codeforces.com/contest/1821/problem/C
+string er chotokhato problemgulo common sense diye chinta kore motamuti ekta pattern e niye ashte hobe.. 
+
+duita a thakle sorboccho tinta segment hote pare: 
+ (a er ager) - (dui a er majher) - (a er porer)
+dhora jak segment gulote 3,2,1 erokom onnanno value ache
+bcdaefag
+3 tar ta minimize korte 2 turn lagbe, 2 tar khetre 2 turn lagbe, 1 tar khetre 1 turn lagbe. tahole ei string theke aa te namiye ante total koy
+turn lagteche.. simple max(2,2,1)
+
+a jodi 5 ta thake tar jonno 6 ta segment, je segment er length beshi oita minimize korar turn songkha ber korbo.. evabe b,c,d,... 26 ta letter 
+er jonno ber korbo.. then  tader moddhekar minimum value e hobe answar...... isn't it simple?
